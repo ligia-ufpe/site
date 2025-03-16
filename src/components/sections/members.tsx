@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, Instagram } from 'lucide-react';
+import { Linkedin, Mail, Instagram, Globe, Github } from 'lucide-react';
 
 interface Member {
   id: number;
@@ -14,6 +14,8 @@ interface Member {
     linkedin?: string;
     instagram?: string;
     email?: string;
+    portfolio?: string;
+    github?: string;
   };
 }
 
@@ -96,7 +98,7 @@ const members: Member[] = [
     name: 'Victor Amarante',
     role: 'Diretor de Ensino',
     focus: 'Aprendizado de Máquina',
-    image: 'public/vafs.jpg',
+    image: 'vafs.jpg',
     bio: 'Victor Amarante é Engenheiro de Software com foco em IA, atuando como Data Scientist no CESAR. Tem experiência em Machine Learning e IA Generativa, desenvolvendo sistemas avançados com LLMs, RAG e AI Agents. Como Diretor de Ensino da LIGIA, acompanha os alunos nas trilhas de aprendizado, promovendo cursos alinhados às áreas de atuação e projetos da Liga.',
     social: {
       linkedin: 'https://www.linkedin.com/in/vamarante/',
@@ -109,12 +111,14 @@ const members: Member[] = [
     name: 'Vitor Negromonte',
     role: 'Diretor de Extensão',
     focus: 'Visão Computacional',
-    image: 'public/vnco.jpg',
+    image: 'vnco.jpg',
     bio: 'Vitor Negromonte é um pesquisador de visão computacional com foco em detecção de objetos e segmentação de imagens, com interesse em IA em sistemas embarcados. Como Diretor de Extensão da LIGIA, ele promove parcerias, organiza eventos de IA e desenvolve recursos educacionais para a comunidade.',
     social: {
       linkedin: 'https://linkedin.com/in/vitornegromonte',
       email: 'vnco@cin.ufpe.br',
-      instagram: 'https://www.instagram.com/vitor.ncabral/'
+      instagram: 'https://www.instagram.com/vitor.ncabral/',
+      portfolio: 'https://vitornegromonte.github.io/',
+      github: 'http://github.com/vitornegromonte/'
     }
   }
 ];
@@ -198,40 +202,62 @@ export function Members() {
       <p className="text-gray-300 text-center">{selectedMember.bio}</p>
       
       {selectedMember.social && (
-        <div className="flex gap-4 mt-4">
-          {selectedMember.social.linkedin && (
-            <a 
-              href={selectedMember.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              aria-label={`${selectedMember.name}'s LinkedIn`}
-            >
-              <Linkedin size={20} className="text-[#FF4B1F]" />
-            </a>
-          )}
-          {selectedMember.social.instagram && (
-            <a 
-              href={selectedMember.social.instagram}
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              aria-label={`${selectedMember.name}'s Instagram`}
-            >
-              <Instagram size={20} className="text-[#FF4B1f]" />
-            </a>
-          )}
-          {selectedMember.social.email && (
-            <a 
-              href={`mailto:${selectedMember.social.email}`}
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              aria-label={`Email ${selectedMember.name}`}
-            >
-              <Mail size={20} className="text-[#FF4B1F]" />
-            </a>
-          )}
-        </div>
-      )}
+    <div className="flex gap-4 mt-4">
+    {selectedMember.social.linkedin && (
+      <a 
+        href={selectedMember.social.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+        aria-label={`${selectedMember.name}'s LinkedIn`}
+      >
+        <Linkedin size={20} className="text-[#FF4B1F]" />
+      </a>
+    )}
+    {selectedMember.social.instagram && (
+      <a 
+        href={selectedMember.social.instagram}
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+        aria-label={`${selectedMember.name}'s Instagram`}
+      >
+        <Instagram size={20} className="text-[#FF4B1F]" />
+      </a>
+    )}
+    {selectedMember.social.email && (
+      <a 
+        href={`mailto:${selectedMember.social.email}`}
+        className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+        aria-label={`Email ${selectedMember.name}`}
+      >
+        <Mail size={20} className="text-[#FF4B1F]" />
+      </a>
+    )}
+    {selectedMember.social.portfolio && (
+      <a 
+        href={selectedMember.social.portfolio}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+        aria-label={`${selectedMember.name}'s Portfolio`}
+      >
+        <Globe size={20} className="text-[#FF4B1F]" />
+      </a>
+    )}
+    {selectedMember.social.github && (
+      <a 
+        href={selectedMember.social.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+        aria-label={`${selectedMember.name}'s GitHub`}
+      >
+        <Github size={20} className="text-[#FF4B1F]" />
+      </a>
+    )}
+  </div>
+  )}
       
       <button
         onClick={() => setSelectedMember(null)}
