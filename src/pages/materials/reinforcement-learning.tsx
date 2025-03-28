@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Code, ArrowLeft, Play } from 'lucide-react';
+import { Code, ArrowLeft, Play, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ReinforcementLearningPage() {
@@ -65,7 +65,7 @@ class QLearning:
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <Code className="w-12 h-12 text-[#FF4B1F]" />
+                <Bot className="w-12 h-12 text-[#FF4B1F]" />
                 <h1 className="text-4xl font-bold">Reinforcement Learning Examples</h1>
               </div>
 

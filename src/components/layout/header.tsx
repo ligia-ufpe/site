@@ -14,6 +14,7 @@ export function Header() {
     { name: 'Iniciativas', href: '#initiatives' },
     { name: 'Membros', href: '#members' },
     { name: 'Recursos', href: '#resources' },
+    { name: 'Eventos', href: '#events' },
   ];
 
   const socialLinks = [

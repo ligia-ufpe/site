@@ -13,10 +13,10 @@ export function About() {
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-8">Sobre a Ligia</h2>
         <p className="text-xl text-gray-300 mb-8">
-        Ligia is an AI research initiative dedicated to advancing the frontiers of artificial intelligence through collaborative innovation and cutting-edge research at Federal University of Pernambuco.
+        Ligia é a primeira Liga Acadêmica de Inteligência Artificial da Universidade Federal de Pernambuco. Criada por estudantes, busca integrar alunos e professores no estudo e aplicação da IA por meio de eventos, projetos e parcerias.
         </p>
         <p className="text-lg text-gray-400">
-          Our mission is to foster groundbreaking research in artificial intelligence while nurturing the next generation of AI researchers and practitioners. Through interdisciplinary collaboration and innovative approaches, we strive to develop AI solutions that address real-world challenges and contribute to the global AI community.
+        Nossa missão é criar uma comunidade ativa e colaborativa em Inteligência Artificial, conectando estudantes e pesquisadores para aprender, explorar e desenvolver soluções inovadoras. Buscamos promover eventos, projetos e iniciativas educacionais que aproximem a IA do mundo real e fortaleçam seu impacto na sociedade.
         </p>
       </motion.div>
     </div>

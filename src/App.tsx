@@ -10,6 +10,7 @@ import NeuralNetworksPage from '@/pages/materials/neural-networks';
 import ComputerVisionPage from '@/pages/materials/computer-vision';
 import NLPGuidePage from '@/pages/materials/nlp-guide';
 import ReinforcementLearningPage from '@/pages/materials/reinforcement-learning';
+import { OpenSource } from '@/pages/open-source';
 import { ScrollToAnchor } from '@/components/ScrollToAnchor';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/materials/computer-vision" element={<ComputerVisionPage />} />
             <Route path="/materials/nlp-guide" element={<NLPGuidePage />} />
             <Route path="/materials/reinforcement-learning" element={<ReinforcementLearningPage />} />
+            <Route path="/open-source" element={<OpenSource />} />
           </Routes>
           <Footer />
         </div>

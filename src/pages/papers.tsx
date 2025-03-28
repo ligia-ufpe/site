@@ -101,9 +101,9 @@ export default function PapersPage() {
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Research Papers</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Artigos</h1>
               <p className="text-xl text-gray-300">
-                Explore our latest research contributions in artificial intelligence and machine learning.
+                Explore nossas últimas contriduições em pesquisa na área de IA, incluindo aprendizado de máquina e processamento de linguagem natural.
               </p>
             </motion.div>
 
@@ -140,7 +140,7 @@ export default function PapersPage() {
                               href={paper.link}
                               className="inline-flex items-center text-[#FF4B1F] hover:text-[#FF4B1F]/80 transition-colors"
                             >
-                              Read Paper <ExternalLink className="w-4 h-4 ml-2" />
+                              Artigo <ExternalLink className="w-4 h-4 ml-2" />
                             </a>
                           </div>
                         </div>

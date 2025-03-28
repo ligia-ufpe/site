@@ -6,6 +6,7 @@ import { Members } from '@/components/sections/members';
 import { Resources } from '@/components/sections/resources';
 import { Contact } from '@/components/sections/contact';
 import { Initiatives } from '@/components/sections/initiatives';
+import { Events } from '@/components/sections/events';
 
 export default function HomePage() {
   return (
@@ -30,6 +31,9 @@ export default function HomePage() {
         </section>
         <section id="resources" className="py-20 bg-white/5">
           <Resources />
+        </section>
+        <section id="events" className="py-20 bg-white/5">
+          <Events />
         </section>
         <section id="contact" className="py-20">
           <Contact />

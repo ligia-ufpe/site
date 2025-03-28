@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Video, ArrowLeft, View } from 'lucide-react';
+import { View, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ComputerVisionPage() {
@@ -52,7 +52,7 @@ export default function ComputerVisionPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-4 mb-8">
-                <Video className="w-12 h-12 text-[#FF4B1F]" />
+                <View className="w-12 h-12 text-[#FF4B1F]" />
                 <h1 className="text-4xl font-bold">Computer Vision with PyTorch</h1>
               </div>
 
