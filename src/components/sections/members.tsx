@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Dialog } from '@headlessui/react';
-import { Github, Linkedin, Twitter, Mail, Instagram, Globe, Search } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram, Globe, Search } from 'lucide-react';
 
 interface Member {
   id: number;
@@ -226,7 +226,7 @@ export function Members() {
                       onLoad={() => setImageLoading(prev => ({ ...prev, [member.id]: false }))}
                     />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#FF4B1F] text-center transition-colors">{member.name}</h3>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#FF4B1F] transition-colors">{member.name}</h3>
                   <p className="text-gray-400 mb-3 text-center">{member.role}</p>
                 </motion.div>
               ))}
@@ -371,9 +371,11 @@ export function Members() {
                   {selectedMember.name}
                 </Dialog.Title>
                 <p className="text-gray-400 mb-2 text-lg">{selectedMember.role}</p>
-                <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF4B1F]/20 text-[#FF4B1F] text-sm font-medium mb-6">
-                  {selectedMember.focus}
-                </span>
+                {selectedMember.role !== 'Coordenador' && (
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF4B1F]/20 text-[#FF4B1F] text-sm font-medium mb-6">
+                    {selectedMember.focus}
+                  </span>
+                )}
                 <p className="text-gray-300 text-center leading-relaxed mb-8">{selectedMember.bio}</p>
                 
                 {selectedMember.social && (

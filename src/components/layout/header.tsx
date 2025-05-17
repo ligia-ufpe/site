@@ -135,7 +135,7 @@ export function Header() {
                 size="sm"
                 onClick={() => handleNavigation('#contact')}
               >
-                Contact Us
+                Contato
               </Button>
             </div>
           </div>
