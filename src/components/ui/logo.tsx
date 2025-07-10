@@ -1,11 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2">
       <img 
-        src="/logo.svg" 
+        src="images/logo.svg" 
         alt="Ligia Logo" 
         className="w-8 h-8 relative"
       />
