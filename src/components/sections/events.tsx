@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Calendar, MapPin, Users, ExternalLink, ArrowRight, Clock } from 'lucide-react';
 import { Dialog } from '@headlessui/react';
 import { Button } from '../ui/button';
-import { events, Event } from '../models/events';
+import { oldEvents, nextEvents, Event } from '../models/events';
 
 
 export function Events() {
@@ -17,14 +17,18 @@ export function Events() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">Futuros Eventos</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">Próximos Eventos</h2>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-          Junte-se a nós para eventos incríveis e oportunidades de aprender, colaborar, inovar e conectar-se..
+          Junte-se a nós para eventos incríveis e oportunidades de aprender, colaborar, inovar e conectar-se.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-        {events.map((event, index) => (
+      <div className={`grid gap-4 sm:gap-6 lg:gap-8 ${
+        nextEvents.length === 1 ? 'grid-cols-1 max-w-md mx-auto' :
+        nextEvents.length === 2 ? 'grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto' :
+        'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+      }`}>
+        {nextEvents.map((event, index) => (
           <motion.div
             key={event.id}
             initial={{ opacity: 0, y: 20 }}
@@ -80,6 +84,90 @@ export function Events() {
         ))}
       </div>
 
+      {/* Seção de Eventos Passados */}
+      {oldEvents.length > 0 && (
+        <div className="mt-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Eventos Passados</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Relembre os eventos da liga que já aconteceram
+            </p>
+          </motion.div>
+
+          <div className={`grid gap-4 sm:gap-6 lg:gap-8 ${
+            oldEvents.length === 1 ? 'grid-cols-1 max-w-md mx-auto' :
+            oldEvents.length === 2 ? 'grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto' :
+            'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+          }`}>
+            {oldEvents.map((event, index) => (
+              <motion.div
+                key={event.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                onClick={() => setSelectedEvent(event)}
+                className="group relative overflow-hidden rounded-2xl bg-white/2.5 hover:bg-white/5 transition-all duration-500 cursor-pointer"
+              >
+                <div className="absolute inset-0">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+                </div>
+                
+                <div className="relative p-4 sm:p-6 lg:p-8">
+                  <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                    <span className={`inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm ${
+                      event.type === 'conference' ? 'bg-blue-500/20 text-blue-400' :
+                      event.type === 'workshop' ? 'bg-green-500/20 text-green-400' :
+                      'bg-purple-500/20 text-purple-400'
+                    }`}>
+                      {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
+                    </span>
+                    <span className="px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm bg-gray-600/20 text-gray-400">
+                      Finalizado
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 group-hover:text-[#FF4B1F] transition-colors">
+                    {event.title}
+                  </h3>
+                  
+                  <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                    <div className="flex items-center text-sm sm:text-base text-gray-400">
+                      <Calendar className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
+                      <span>{event.date}</span>
+                    </div>
+                    <div className="flex items-center text-sm sm:text-base text-gray-400">
+                      <Clock className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
+                      <span>{event.time}</span>
+                    </div>
+                    <div className="flex items-center text-sm sm:text-base text-gray-400">
+                      <MapPin className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
+                      <span>{event.location}</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 sm:mt-8 flex items-center gap-2 text-[#FF4B1F]">
+                    <span className="text-xs sm:text-sm font-medium">Ver Detalhes</span>
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <Dialog
         open={selectedEvent !== null}
         onClose={() => setSelectedEvent(null)}
@@ -95,6 +183,7 @@ export function Events() {
                     src={selectedEvent.image}
                     alt={selectedEvent.title}
                     className="w-full h-full object-cover"
+                    style={{ objectPosition: '50% 25%' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-4">
@@ -115,36 +204,31 @@ export function Events() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
                   <div className="bg-white/5 rounded-lg p-4">
                     <Calendar className="w-5 h-5 text-[#FF4B1F] mb-2" />
-                    <div className="text-sm text-gray-400">Date</div>
+                    <div className="text-sm text-gray-400">Data</div>
                     <div className="font-medium">{selectedEvent.date}</div>
                   </div>
                   <div className="bg-white/5 rounded-lg p-4">
                     <Clock className="w-5 h-5 text-[#FF4B1F] mb-2" />
-                    <div className="text-sm text-gray-400">Time</div>
+                    <div className="text-sm text-gray-400">Horário</div>
                     <div className="font-medium">{selectedEvent.time}</div>
                   </div>
                   <div className="bg-white/5 rounded-lg p-4">
                     <Users className="w-5 h-5 text-[#FF4B1F] mb-2" />
-                    <div className="text-sm text-gray-400">Capacity</div>
+                    <div className="text-sm text-gray-400">Capacidade</div>
                     <div className="font-medium">{selectedEvent.capacity} people</div>
                   </div>
                 </div>
 
                 <div className="bg-white/5 rounded-xl p-6 mb-8">
-                  <h4 className="text-lg font-bold mb-4">Event Schedule</h4>
-                  <div className="space-y-4">
-                    {selectedEvent.schedule.map((item, index) => (
-                      <div key={index} className="flex items-start gap-4">
-                        <div className="w-24 text-sm text-[#FF4B1F]">{item.time}</div>
-                        <div className="flex-1 text-gray-300">{item.activity}</div>
-                      </div>
-                    ))}
-                  </div>
+                  <h4 className="text-lg font-bold mb-4">Descrição</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    {selectedEvent.description}
+                  </p>
                 </div>
 
                 {selectedEvent.speakers && (
                   <div className="bg-white/5 rounded-xl p-6 mb-8">
-                    <h4 className="text-lg font-bold mb-4">Featured Speakers</h4>
+                    <h4 className="text-lg font-bold mb-4">Palestrantes</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       {selectedEvent.speakers.map((speaker) => (
                         <div key={speaker.name} className="flex items-center gap-4">
@@ -164,7 +248,7 @@ export function Events() {
                 )}
 
                 <div className="bg-white/5 rounded-xl p-6 mb-8">
-                  <h4 className="text-lg font-bold mb-4">Event Highlights</h4>
+                  <h4 className="text-lg font-bold mb-4">Destaques</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     {selectedEvent.highlights.map((highlight) => (
                       <li
