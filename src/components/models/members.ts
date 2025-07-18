@@ -20,7 +20,7 @@ export const members: Member[] = [
     name: 'Prof. Adiel Filho',
     role: 'Coordenador',
     focus: 'Aprendizado de Máquina',
-    image: 'https://portal.cin.ufpe.br/wp-content/uploads/2024/04/Adiel-Filho.jpg',
+    image: 'images/members/Adiel.jpg',
     bio: 'Prof. Associado (CIn-UFPE), Doutor em Eng. de Gestão/Produção (UFPE). Pesquisador (INCT-IAIA, IARA) e visitante (Coimbra, Southampton, Poznan). Prêmio EURO EJOR 2019. Foco: Análise de Decisão, IA, Preferências, Analytics e Pesquisa Operacional.',
     social: {
       linkedin: 'https://www.linkedin.com/in/adiel-t-de-almeida-filho-7aa3b75/',
@@ -32,7 +32,7 @@ export const members: Member[] = [
     name: 'Prof. George Cavalcanti',
     role: 'Coordenador',
     focus: 'Processamento de Linguagem Natural',
-    image: 'https://portal.cin.ufpe.br/wp-content/uploads/2024/05/Professores-CIn-3.png',
+    image: 'images/members/George.jpg',
     bio: 'Professor Titular e Coordenador de Pesquisa (CIn-UFPE). Membro: Academia Pernambucana de Ciências, IEEE (sênior) e LIVIA (ETS, Canadá). Pesquisa: Aprendizado de Máquina, Visão Computacional (sistemas classificadores, meta-aprendizado, etc.) e Processamento de Linguagem Natural.',
     social: {
       linkedin: 'https://www.linkedin.com/in/george-dc-cavalcanti-b9485018/',
@@ -44,7 +44,7 @@ export const members: Member[] = [
     name: 'Prof. Tsang Ing Ren',
     role: 'Coordenador',
     focus: 'Visão Computacional',
-    image: 'https://portal.cin.ufpe.br/wp-content/uploads/2024/05/Professores-CIn-15.png',
+    image: 'images/members/Tsang.jpg',
     bio: 'Prof. Associado (CIn-UFPE), Doutor em Visão Computacional/Física (Univ. Antuérpia). Membro IEEE. Pesquisa: Visão Computacional, Aprendizado de Máquina (incluindo Deep Learning), Processamento de Imagens e Fotografia Computacional.',
     social: {
       linkedin: 'https://www.linkedin.com/in/ing-ren-tsang-6551371/',

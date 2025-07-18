@@ -116,7 +116,7 @@ export const nextEvents: Event[] = [
     location: "UFPE",
     type: "workshop",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
-    description: "A inteligência artificial já faz parte do nosso dia a dia, mas você sabe como ela funciona? Nesta oficina, vamos descomplicar esse tema com atividades interativas e criativas! Você vai entender como a IA aprende e como ela pode criar textos, imagens e músicas -- tudo de forma acessível, sem precisar programar.",
+    description: "A inteligência artificial já faz parte do nosso dia a dia, mas você sabe como ela funciona? Nesta oficina, vamos descomplicar esse tema com atividades interativas e criativas! Você vai entender como a IA aprende e como ela pode criar textos, imagens e músicas, tudo de forma acessível, sem precisar programar.",
     capacity: 20,
     registrationLink: "https://plataforma.clubesdecienciabrasil.com.br/management/dashboard/",
     highlights: [
