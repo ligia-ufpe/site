@@ -37,42 +37,42 @@ export const oldEvents: Event[] = [
       {
         name: "Prof. Tsang Ing Ren",
         role: "Prof. Associado (CIn-UFPE)",
-        image: "https://portal.cin.ufpe.br/wp-content/uploads/2024/05/Professores-CIn-15.png"
+        image: "images/members/Tsang.jpg"
       },
       {
         name: "Prof. George Cavalcanti",
         role: "Professor Titular e Coordenador de Pesquisa (CIn-UFPE)",
-        image: "https://portal.cin.ufpe.br/wp-content/uploads/2024/05/Professores-CIn-3.png"
+        image: "images/members/George.jpg"
       },
       {
         name: "Prof. Adiel Filho",
         role: "Prof. Associado (CIn-UFPE)",
-        image: "https://portal.cin.ufpe.br/wp-content/uploads/2024/04/Adiel-Filho.jpg"
+        image: "images/members/Adiel.jpg"
       },
       {
         name: "Gabriel Matias",
         role: "Diretor Executivo da Ligia",
-        image: "https://vp2uploads.s3.amazonaws.com/18443/67/palestrantes/2e9dbab80cd8acb736e018b10df5cea1b474845a.png"
+        image: "images/members/Gabriel.jpg"
       },
       {
         name: "Júlia Nunes",
         role: "Diretora de Comunicação da Ligia",
-        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400"
+        image: "images/members/Júlia Nunes.jpg"
       },
       {
         name: "Vitor Negromonte",
         role: "Diretor de Extensão da Ligia",
-        image: "images/members/vnco.JPG"
+        image: "images/members/Vitor Negromonte.jpg"
       },
       {
         name: "Rafael Barros",
         role: "Diretor de Pesquisa da Ligia",
-        image: "https://vp2uploads.s3.amazonaws.com/18443/67/palestrantes/2dbf1bb13fda0a50184eef48a58c6eefb220e14d.png"
+        image: "images/members/Rafael.jpg"
       },
       {
         name: "Victor Amarante",
         role: "Diretor de Ensino da Ligia",
-        image: "images/members/vafs.jpg"
+        image: "images/members/Victor Amarante.jpg"
       }
     ],
     highlights: [
@@ -97,7 +97,7 @@ export const oldEvents: Event[] = [
       {
         name: "Prof. George Cavalcanti",
         role: "Professor Titular e Coordenador de Pesquisa (CIn-UFPE)",
-        image: "https://portal.cin.ufpe.br/wp-content/uploads/2024/05/Professores-CIn-3.png"
+        image: "images/members/George.jpg"
       }
     ],
     highlights: [
