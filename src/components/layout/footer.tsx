@@ -1,5 +1,4 @@
-import React from 'react';
-import { Logo } from '@/components/ui/logo';
+import { Logo } from '../ui/logo';
 import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
 
 export function Footer() {
@@ -12,8 +11,8 @@ export function Footer() {
   return (
     <footer className="bg-white/5 py-12 mt-20">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="space-y-4">
+        <div className="flex flex-col md:flex-row justify-between gap-12">
+          <div className="space-y-4 md:max-w-xs">
             <Logo />
             <address className="not-italic text-gray-400">
               Av. Jornalista Anibal Fernandes, s/n<br />
@@ -24,7 +23,7 @@ export function Footer() {
             </address>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="font-bold mb-4">Links rápidos</h3>
             <ul className="space-y-2">
               <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Sobre</a></li>
@@ -33,15 +32,15 @@ export function Footer() {
               <li><a href="#events" className="text-gray-400 hover:text-white transition-colors">Eventos</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contato</a></li>
             </ul>
-          </div>
+          </div> */}
 
-          <div>
+          {/* <div>
             <h3 className="font-bold mb-4">Recursos</h3>
             <ul className="space-y-2">
               <li><a href="/papers" className="text-gray-400 hover:text-white transition-colors">Artigos</a></li>
               <li><a href="/materials" className="text-gray-400 hover:text-white transition-colors">Educacional</a></li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h3 className="font-bold mb-4">Contato</h3>

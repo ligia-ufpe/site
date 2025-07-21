@@ -1,7 +1,7 @@
 import React from 'react';
-import { Menu, X, Github, Linkedin, Twitter , Instagram} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Logo } from '@/components/ui/logo';
+import { Menu, X, Github, Linkedin , Instagram} from 'lucide-react';
+import { Button } from '../ui/button';
+import { Logo } from '../ui/logo';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 export function Header() {
@@ -12,9 +12,9 @@ export function Header() {
   const navigation = [
     { name: 'Sobre', href: '#about' },
     { name: 'Iniciativas', href: '#initiatives' },
-    { name: 'Membros', href: '#members' },
-    { name: 'Recursos', href: '#resources' },
     { name: 'Eventos', href: '#events' },
+    // { name: 'Recursos', href: '#resources' },
+    { name: 'Membros', href: '#members' },
   ];
 
   const socialLinks = [

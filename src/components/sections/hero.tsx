@@ -1,6 +1,4 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import { Brain, Sparkles, Users } from 'lucide-react';
 
 export function Hero() {
@@ -36,7 +34,7 @@ export function Hero() {
               className="w-32 h-32 mx-auto mb-8 relative"
             >
               <img 
-              src="/logo.svg" 
+              src="images/logo.svg" 
               alt="Ligia Logo" 
               className="absolute w-full h-full transform"
             />
