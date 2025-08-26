@@ -113,7 +113,7 @@ export function Events() {
 
       {/* Seção de Eventos Passados */}
       {oldEvents.length > 0 && (
-        <div className="mt-20">
+        <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
