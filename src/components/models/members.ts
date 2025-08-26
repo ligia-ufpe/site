@@ -2,7 +2,7 @@ export interface Member {
   id: number;
   name: string;
   role: string;
-  focus: 'Natural Language Processing' | 'Machine Learning' | 'Computer Vision' | 'Communication' | 'Design' | 'Visão Computacional' | 'Processamento de Linguagem Natural' | 'Aprendizado de Máquina' | 'Comunicação';
+  focus: 'Natural Language Processing' | 'Machine Learning' | 'Computer Vision' | 'Communication' | 'Visão Computacional' | 'Processamento de Linguagem Natural' | 'Aprendizado de Máquina' | 'Comunicação';
   image: string;
   bio: string;
   social?: {
