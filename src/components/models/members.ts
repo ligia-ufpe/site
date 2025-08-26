@@ -202,7 +202,7 @@ export const members: Member[] = [
     id: 16,
     name: 'João Victor Omena',
     role: 'Membro',
-    focus: 'Aprendizado de Máquina',
+    focus: 'Processamento de Linguagem Natural',
     image: 'images/members/João Omena.jpg',
     bio: 'João Victor Omena é estudante de Ciência da Computação na UFPE e desenvolve aplicações de Machine Learning em parceria com o projeto CIn/Motorola. Atua em projetos de classificação automática e análise de falhas, utilizando técnicas de NLP, modelos supervisionados e aprendizado multimodal. É monitor da disciplina de Aprendizagem Profunda e tem forte interesse em aplicações de Inteligência Artificial voltadas à área de segurança.',
     social: {
