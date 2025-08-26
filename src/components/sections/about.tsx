@@ -14,7 +14,7 @@ export function About() {
         <p className="text-xl text-gray-300 mb-8">
         Ligia é a primeira Liga Acadêmica de Inteligência Artificial da Universidade Federal de Pernambuco. Criada por estudantes, busca integrar alunos e professores no estudo e aplicação da IA por meio de eventos, projetos e parcerias.
         </p>
-        <p className="text-lg text-gray-400">
+        <p className="text-xl text-gray-300 mb-8">
         Nossa missão é criar uma comunidade ativa e colaborativa em Inteligência Artificial, conectando estudantes e pesquisadores para aprender, explorar e desenvolver soluções inovadoras. Buscamos promover eventos, projetos e iniciativas educacionais que aproximem a IA do mundo real e fortaleçam seu impacto na sociedade.
         </p>
       </motion.div>
