@@ -2,6 +2,7 @@ export interface Event {
   id: number;
   title: string;
   date: string;
+  dateJS: string;
   time: string;
   location: string;
   type: 'conference' | 'workshop' | 'hackathon';
@@ -21,11 +22,12 @@ export interface Event {
   highlights: string[];
 }
 
-export const oldEvents: Event[] = [
+export const events: Event[] = [
   {
     id: 1,
     title: "Lançamento da Ligia",
     date: "12 de Fevereiro, 2025",
+    dateJS: "2025-02-12",
     time: "16:30 - 18:00 ",
     location: "Anfiteatro do CIn - UFPE",
     type: "conference",
@@ -86,6 +88,7 @@ export const oldEvents: Event[] = [
     id: 2,
     title: "Uso de Inteligência Artificial na Detecção de Fake News",
     date: "4 de Junho, 2025",
+    dateJS: "2025-06-04",
     time: "16:00 - 17:00",
     location: "Anfiteatro do CIn - UFPE",
     type: "conference",
@@ -104,14 +107,12 @@ export const oldEvents: Event[] = [
       "Oportunidade de aprendizado com um pesquisador ativo",
       "Integração entre teoria, pesquisa e comunidade",
     ]
-  }
-];
-
-export const nextEvents: Event[] = [
+  },
   {
     id: 3,
     title: "Workshop - Inteligência Artificial: da curiosidade à criação",
     date: "28 de julho, 2025 - 01 de agosto, 2025",
+    dateJS: "2025-07-28",
     time: "A definir",
     location: "UFPE",
     type: "workshop",
