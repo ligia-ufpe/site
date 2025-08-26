@@ -322,7 +322,7 @@ export const members: Member[] = [
     id: 26,
     name: 'Kaique Bonfim',
     role: 'Membro',
-    focus: 'Design',
+    focus: 'Comunicação',
     image: 'images/members/Kaique Bonfim.jpg',
     bio: 'Kaíque Bonfim é UX/UI Designer e estudante de Sistemas de Informação no CIN UFPE. Tem experiência com design de produtos digitais e IA aplicada ao design. Ex membro do time de comunicação da UFPE Finance (Liga de Mercado Financeiro da UFPE). Atual Líder de Design da Liga Acadêmica de Inteligência Artificial de UFPE.',
     social: {

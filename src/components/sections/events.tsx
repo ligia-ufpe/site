@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Users, ExternalLink, ArrowRight, Clock } from 'lucide-react';
 import { Dialog } from '@headlessui/react';
