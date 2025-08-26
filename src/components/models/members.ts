@@ -2,7 +2,7 @@ export interface Member {
   id: number;
   name: string;
   role: string;
-  focus: 'Natural Language Processing' | 'Machine Learning' | 'Computer Vision' | 'Communication' | 'Design' | 'Visão Computacional' | 'Processamento de Linguagem Natural' | 'Aprendizado de Máquina' | 'Comunicação';
+  focus: 'Natural Language Processing' | 'Machine Learning' | 'Computer Vision' | 'Communication' | 'Visão Computacional' | 'Processamento de Linguagem Natural' | 'Aprendizado de Máquina' | 'Comunicação';
   image: string;
   bio: string;
   social?: {
@@ -202,7 +202,7 @@ export const members: Member[] = [
     id: 16,
     name: 'João Victor Omena',
     role: 'Membro',
-    focus: 'Aprendizado de Máquina',
+    focus: 'Processamento de Linguagem Natural',
     image: 'images/members/João Omena.jpg',
     bio: 'João Victor Omena é estudante de Ciência da Computação na UFPE e desenvolve aplicações de Machine Learning em parceria com o projeto CIn/Motorola. Atua em projetos de classificação automática e análise de falhas, utilizando técnicas de NLP, modelos supervisionados e aprendizado multimodal. É monitor da disciplina de Aprendizagem Profunda e tem forte interesse em aplicações de Inteligência Artificial voltadas à área de segurança.',
     social: {
@@ -322,7 +322,7 @@ export const members: Member[] = [
     id: 26,
     name: 'Kaique Bonfim',
     role: 'Membro',
-    focus: 'Design',
+    focus: 'Comunicação',
     image: 'images/members/Kaique Bonfim.jpg',
     bio: 'Kaíque Bonfim é UX/UI Designer e estudante de Sistemas de Informação no CIN UFPE. Tem experiência com design de produtos digitais e IA aplicada ao design. Ex membro do time de comunicação da UFPE Finance (Liga de Mercado Financeiro da UFPE). Atual Líder de Design da Liga Acadêmica de Inteligência Artificial de UFPE.',
     social: {

@@ -56,7 +56,7 @@ export function Members() {
       {/* Coordenadores Section */}
       {groupedMembers.coordenadores.length > 0 && (
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#FF4B1F]">Coordenadores</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#FF9068]">Coordenadores</h3>
           <motion.div
             initial="hidden"
             animate="visible"
@@ -83,7 +83,7 @@ export function Members() {
                   className="group flex flex-col items-center p-6 rounded-xl bg-white/5 hover:bg-white/7 transition-all duration-600 cursor-pointer backdrop-blur-sm"
                   onClick={() => setSelectedMember(member)}
                 >
-                  <div className="relative w-32 h-32 rounded-full overflow-hidden mb-6 ring-2 ring-[#FF4B1F] ring-offset-2 ring-offset-black group-hover:ring-[#FF4B1F]/80 transition-all duration-300">
+                  <div className="relative w-32 h-32 rounded-full overflow-hidden mb-6 ring-2 ring-[#FF9068] ring-offset-2 ring-offset-black group-hover:ring-[#FF4B1F]/80 transition-all duration-300">
                     {imageLoading[member.id] && (
                       <div className="absolute inset-0 bg-gray-800 animate-pulse" />
                     )}
@@ -106,7 +106,7 @@ export function Members() {
       {/* Diretores Section */}
       {groupedMembers.diretores.length > 0 && (
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#FF4B1F]">Diretores</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#FF9068]">Diretores</h3>
           <motion.div
             initial="hidden"
             animate="visible"
@@ -133,7 +133,7 @@ export function Members() {
                   className="group flex flex-col items-center p-6 rounded-xl bg-white/5 hover:bg-white/7 transition-all duration-600 cursor-pointer backdrop-blur-sm"
                   onClick={() => setSelectedMember(member)}
                 >
-                  <div className="relative w-32 h-32 rounded-full overflow-hidden mb-6 ring-2 ring-[#FF4B1F] ring-offset-2 ring-offset-black group-hover:ring-[#FF4B1F]/80 transition-all duration-300">
+                  <div className="relative w-32 h-32 rounded-full overflow-hidden mb-6 ring-2 ring-[#FF9068] ring-offset-2 ring-offset-black group-hover:ring-[#FF4B1F]/80 transition-all duration-300">
                     {imageLoading[member.id] && (
                       <div className="absolute inset-0 bg-gray-800 animate-pulse" />
                     )}
@@ -146,7 +146,7 @@ export function Members() {
                   </div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-[#FF4B1F] text-center transition-colors">{member.name}</h3>
                   <p className="text-gray-400 mb-3 text-center">{member.role}</p>
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF4B1F]/10 text-[#FF4B1F] text-sm text-center font-medium group-hover:bg-[#FF4B1F]/20 transition-colors">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF9068]/10 text-[#FF9068] text-sm text-center font-medium group-hover:bg-[#FF4B1F]/20 transition-colors">
                     {member.focus}
                   </span>
                 </motion.div>
@@ -159,7 +159,7 @@ export function Members() {
       {/* Membros Section */}
       {groupedMembers.membros.length > 0 && (
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#FF4B1F]">Membros</h3>
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#FF9068]">Membros</h3>
           <motion.div
             initial="hidden"
             animate="visible"
@@ -186,7 +186,7 @@ export function Members() {
                   className="group flex flex-col items-center p-6 rounded-xl bg-white/5 hover:bg-white/7 transition-all duration-600 cursor-pointer backdrop-blur-sm"
                   onClick={() => setSelectedMember(member)}
                 >
-                  <div className="relative w-32 h-32 rounded-full overflow-hidden mb-6 ring-2 ring-[#FF4B1F] ring-offset-2 ring-offset-black group-hover:ring-[#FF4B1F]/80 transition-all duration-300">
+                  <div className="relative w-32 h-32 rounded-full overflow-hidden mb-6 ring-2 ring-[#FF9068] ring-offset-2 ring-offset-black group-hover:ring-[#FF4B1F]/80 transition-all duration-300">
                     {imageLoading[member.id] && (
                       <div className="absolute inset-0 bg-gray-800 animate-pulse" />
                     )}
@@ -199,7 +199,7 @@ export function Members() {
                   </div>
                   <h3 className="text-xl font-bold mb-2 group-hover:text-[#FF4B1F] text-center transition-colors">{member.name}</h3>
                   <p className="text-gray-400 mb-3 text-center">{member.role}</p>
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF4B1F]/10 text-[#FF4B1F] text-sm text-center font-medium group-hover:bg-[#FF4B1F]/20 transition-colors">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-[#FF9068]/10 text-[#FF9068] text-sm text-center font-medium group-hover:bg-[#FF4B1F]/20 transition-colors">
                     {member.focus}
                   </span>
                 </motion.div>
