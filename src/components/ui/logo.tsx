@@ -4,11 +4,10 @@ export function Logo() {
   return (
     <Link to="/" className="flex items-center gap-2">
       <img 
-        src="images/logo.svg" 
+        src="images/logo+nome.svg" 
         alt="Ligia Logo" 
-        className="w-8 h-8 relative"
+        className="w-25 h-8 relative"
       />
-      <span className="text-2xl font-bold text-white">Ligia</span>
     </Link>
   );
 }
