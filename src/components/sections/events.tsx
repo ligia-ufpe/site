@@ -230,7 +230,7 @@ export function Events() {
                   <div className="bg-white/5 rounded-lg p-4">
                     <Users className="w-5 h-5 text-[#FF4B1F] mb-2" />
                     <div className="text-sm text-gray-400">Capacidade</div>
-                    <div className="font-medium">{selectedEvent.capacity} people</div>
+                    <div className="font-medium">{selectedEvent.capacity} pessoas</div>
                   </div>
                 </div>
 
@@ -280,6 +280,7 @@ export function Events() {
                 <div className="flex justify-end gap-4">
                   <Button
                     variant="outline"
+                    className="focus-visible:ring-0 focus-visible:ring-offset-0"
                     onClick={() => setSelectedEvent(null)}
                   >
                     Fechar

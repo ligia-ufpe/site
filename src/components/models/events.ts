@@ -113,7 +113,7 @@ export const events: Event[] = [
     title: "Workshop - Inteligência Artificial: da curiosidade à criação",
     date: "28 de julho, 2025 - 01 de agosto, 2025",
     dateJS: "2025-07-28",
-    time: "A definir",
+    time: "9:00 - 17:00",
     location: "UFPE",
     type: "workshop",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
