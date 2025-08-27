@@ -73,11 +73,7 @@ export function Events() {
                 </div>
                 
                 <div className="relative p-4 sm:p-6 lg:p-8">
-                  <span className={`inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm mb-3 sm:mb-4 ${
-                    event.type === 'conference' ? 'bg-blue-500/20 text-blue-400' :
-                    event.type === 'workshop' ? 'bg-green-500/20 text-green-400' :
-                    'bg-purple-500/20 text-purple-400'
-                  }`}>
+                  <span className="inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm mb-3 sm:mb-4 bg-[#FF9068]/20 text-[#FF9068]">
                     {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
                   </span>
 
@@ -153,11 +149,7 @@ export function Events() {
                 
                 <div className="relative p-4 sm:p-6 lg:p-8">
                   <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                    <span className={`inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm ${
-                      event.type === 'conference' ? 'bg-blue-500/20 text-blue-400' :
-                      event.type === 'workshop' ? 'bg-green-500/20 text-green-400' :
-                      'bg-purple-500/20 text-purple-400'
-                    }`}>
+                    <span className="inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm bg-[#FF9068]/20 text-[#FF9068]">
                       {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
                     </span>
                     <span className="px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm bg-gray-600/20 text-gray-400">
@@ -184,7 +176,7 @@ export function Events() {
                     </div>
                   </div>
 
-                  <div className="mt-6 sm:mt-8 flex items-center gap-2 text-[#FF4B1F]">
+                  <div className="mt-6 sm:mt-8 flex items-center gap-2 text-[#FF9068] group-hover:text-[#FF4B1F] transition-colors duration-300">
                     <span className="text-xs sm:text-sm font-medium">Ver Detalhes</span>
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -214,11 +206,7 @@ export function Events() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-sm ${
-                      selectedEvent.type === 'conference' ? 'bg-blue-500/20 text-blue-400' :
-                      selectedEvent.type === 'workshop' ? 'bg-green-500/20 text-green-400' :
-                      'bg-purple-500/20 text-purple-400'
-                    }`}>
+                    <span className="px-3 py-1 rounded-full text-sm bg-[#FF9068]/20 text-[#FF9068]">
                       {selectedEvent.type.charAt(0).toUpperCase() + selectedEvent.type.slice(1)}
                     </span>
                   </div>
@@ -242,7 +230,7 @@ export function Events() {
                   <div className="bg-white/5 rounded-lg p-4">
                     <Users className="w-5 h-5 text-[#FF4B1F] mb-2" />
                     <div className="text-sm text-gray-400">Capacidade</div>
-                    <div className="font-medium">{selectedEvent.capacity} people</div>
+                    <div className="font-medium">{selectedEvent.capacity} pessoas</div>
                   </div>
                 </div>
 
@@ -292,13 +280,24 @@ export function Events() {
                 <div className="flex justify-end gap-4">
                   <Button
                     variant="outline"
+                    className="focus-visible:ring-0 focus-visible:ring-offset-0"
                     onClick={() => setSelectedEvent(null)}
                   >
                     Fechar
                   </Button>
                   <Button
                     variant="primary"
-                    onClick={() => window.open(selectedEvent.registrationLink, '_blank')}
+                    onClick={() => {
+                      if (!selectedEvent) return;
+                      const eventDate = parseEventDate(selectedEvent.dateJS);
+                      const today = new Date();
+                      const todayAtMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+                      const isPast = eventDate < todayAtMidnight;
+                      const link = isPast
+                        ? (selectedEvent.instagramLink ?? selectedEvent.registrationLink)
+                        : (selectedEvent.registrationLink ?? selectedEvent.instagramLink);
+                      if (link) window.open(link, '_blank');
+                    }}
                   >
                     Saiba mais
                     <ExternalLink className="w-4 h-4 ml-2" />
