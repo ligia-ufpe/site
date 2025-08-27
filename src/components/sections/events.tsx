@@ -73,11 +73,7 @@ export function Events() {
                 </div>
                 
                 <div className="relative p-4 sm:p-6 lg:p-8">
-                  <span className={`inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm mb-3 sm:mb-4 ${
-                    event.type === 'conference' ? 'bg-blue-500/20 text-blue-400' :
-                    event.type === 'workshop' ? 'bg-green-500/20 text-green-400' :
-                    'bg-purple-500/20 text-purple-400'
-                  }`}>
+                  <span className="inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm mb-3 sm:mb-4 bg-[#FF9068]/20 text-[#FF9068]">
                     {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
                   </span>
 
@@ -153,11 +149,7 @@ export function Events() {
                 
                 <div className="relative p-4 sm:p-6 lg:p-8">
                   <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                    <span className={`inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm ${
-                      event.type === 'conference' ? 'bg-blue-500/20 text-blue-400' :
-                      event.type === 'workshop' ? 'bg-green-500/20 text-green-400' :
-                      'bg-purple-500/20 text-purple-400'
-                    }`}>
+                    <span className="inline-block px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm bg-[#FF9068]/20 text-[#FF9068]">
                       {event.type.charAt(0).toUpperCase() + event.type.slice(1)}
                     </span>
                     <span className="px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm bg-gray-600/20 text-gray-400">
@@ -184,7 +176,7 @@ export function Events() {
                     </div>
                   </div>
 
-                  <div className="mt-6 sm:mt-8 flex items-center gap-2 text-[#FF4B1F]">
+                  <div className="mt-6 sm:mt-8 flex items-center gap-2 text-[#FF9068] group-hover:text-[#FF4B1F] transition-colors duration-300">
                     <span className="text-xs sm:text-sm font-medium">Ver Detalhes</span>
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -214,11 +206,7 @@ export function Events() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-sm ${
-                      selectedEvent.type === 'conference' ? 'bg-blue-500/20 text-blue-400' :
-                      selectedEvent.type === 'workshop' ? 'bg-green-500/20 text-green-400' :
-                      'bg-purple-500/20 text-purple-400'
-                    }`}>
+                    <span className="px-3 py-1 rounded-full text-sm bg-[#FF9068]/20 text-[#FF9068]">
                       {selectedEvent.type.charAt(0).toUpperCase() + selectedEvent.type.slice(1)}
                     </span>
                   </div>
