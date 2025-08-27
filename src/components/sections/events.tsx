@@ -287,7 +287,17 @@ export function Events() {
                   </Button>
                   <Button
                     variant="primary"
-                    onClick={() => window.open(selectedEvent.registrationLink, '_blank')}
+                    onClick={() => {
+                      if (!selectedEvent) return;
+                      const eventDate = parseEventDate(selectedEvent.dateJS);
+                      const today = new Date();
+                      const todayAtMidnight = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+                      const isPast = eventDate < todayAtMidnight;
+                      const link = isPast
+                        ? (selectedEvent.instagramLink ?? selectedEvent.registrationLink)
+                        : (selectedEvent.registrationLink ?? selectedEvent.instagramLink);
+                      if (link) window.open(link, '_blank');
+                    }}
                   >
                     Saiba mais
                     <ExternalLink className="w-4 h-4 ml-2" />
