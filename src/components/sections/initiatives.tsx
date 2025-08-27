@@ -45,8 +45,8 @@ export function Initiatives() {
             
             <div className="relative p-8">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-[#FF4B1F]/20 rounded-xl">
-                  <initiative.icon className="w-8 h-8 text-[#FF4B1F]" />
+                <div className="p-3 bg-[#FF9068]/20 text-[#FF9068] group-hover:bg-[#FF4B1F]/20 group-hover:text-[#FF4B1F] rounded-xl">
+                  <initiative.icon className="w-8 h-8"/>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2 group-hover:text-[#FF4B1F] transition-colors">
@@ -56,7 +56,7 @@ export function Initiatives() {
                 </div>
               </div>
 
-              <div className="mt-8 flex items-center gap-2 text-[#FF4B1F]">
+              <div className="mt-8 flex items-center gap-2 text-[#FF9068] group-hover:text-[#FF4B1F]">
                 <span className="text-sm font-medium">Saiba mais</span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
               </div>
