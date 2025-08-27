@@ -34,7 +34,7 @@ export const events: Event[] = [
     image: "images/events/lancamento.JPG",
     description: "No dia 12 de fevereiro você terá a oportunidade de se conectar aos membros que compõem a Ligia - Liga Acadêmica de Inteligência Artificial, e conhecer mais sobre a iniciativa.",
     capacity: 100,
-    registrationLink: "https://www.sympla.com.br/evento/lancamento-da-ligia-ufpe/2814892?_gl=1*ikmdk2*_gcl_au*MTc5OTI1NzI2Ni4xNzQ3NzQ3ODAz*_ga*Njc0MjgxMDU5LjE3NDc3NDc4MDY.*_ga_KXH10SQTZF*czE3NTIxMzU2NjkkbzUkZzEkdDE3NTIxMzU3NTckajU5JGwwJGgxMTAyNDAzMTMx",
+    registrationLink: "https://www.instagram.com/ligia.ufpe/p/DFa0C4vJL0r/",
     speakers: [
       {
         name: "Prof. Tsang Ing Ren",
@@ -95,7 +95,7 @@ export const events: Event[] = [
     image: "images/events/fake_news.jpg",
     description: "Nesta primeira edição, teremos a honra de receber o professor George Darmiton, coordenador do curso de Inteligência Artificial da UFPE e um dos fundadores da LIGIA. Ele apresentará uma palestra sobre suas pesquisas no grupo CoDes, com foco na aplicação de técnicas de Inteligência Artificial para a detecção de fake news.",
     capacity: 100,
-    registrationLink: "https://www.sympla.com.br/evento/uso-de-inteligencia-artificial-na-deteccao-de-fake-news-ligia/2970586?_gl=1*1vxhq79*_gcl_au*MTc5OTI1NzI2Ni4xNzQ3NzQ3ODAz*_ga*Njc0MjgxMDU5LjE3NDc3NDc4MDY.*_ga_KXH10SQTZF*czE3NTIxMzU2NjkkbzUkZzEkdDE3NTIxMzU4MTgkajYwJGwwJGgxMTAyNDAzMTMx",
+    registrationLink: "https://www.instagram.com/ligia.ufpe/p/DKAUK3RO2Xf/",
     speakers: [
       {
         name: "Prof. George Cavalcanti",
@@ -119,7 +119,7 @@ export const events: Event[] = [
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800",
     description: "A inteligência artificial já faz parte do nosso dia a dia, mas você sabe como ela funciona? Nesta oficina, vamos descomplicar esse tema com atividades interativas e criativas! Você vai entender como a IA aprende e como ela pode criar textos, imagens e músicas, tudo de forma acessível, sem precisar programar.",
     capacity: 20,
-    registrationLink: "https://plataforma.clubesdecienciabrasil.com.br/management/dashboard/",
+    registrationLink: "https://www.instagram.com/ligia.ufpe/p/DLiDPuJOZLk/",
     highlights: [
       "Imersão científica",
       "Clubes interativos",
